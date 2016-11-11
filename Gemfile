@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
+gem "mini_magick"
+gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
