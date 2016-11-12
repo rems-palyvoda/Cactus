@@ -16,6 +16,7 @@ gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'capybara', '~> 2.10', '>= 2.10.1'
+  gem 'rails-controller-testing'
 end
 
 group :development do
