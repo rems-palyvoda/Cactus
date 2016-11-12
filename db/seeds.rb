@@ -7,5 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.create(first_name: "Ivan", last_name: "Zabuv",
-                  email: "izabuv@example.com", password: "foobar",
-                  password_confirmation: "foobar")
+                  email: "izabuv@example.com",
+                  password: "foobar", password_confirmation: "foobar",
+                  avatar: open("app/assets/images/default_avatar.png"))

@@ -18,10 +18,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
     process resize_to_fit: [100, 100]
   end
 
-  version :thumb do
-    process resize_to_fit: [50, 50]
-  end
-
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:
