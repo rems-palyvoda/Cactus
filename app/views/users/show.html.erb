@@ -1,4 +1,8 @@
-<%= image_tag @user.avatar_url(:avatar) if @user.avatar? %>
-<%= @user.first_name %>,
-<%= @user.last_name %>,
-<%= @user.email %>
+<% if logged_in?%>
+  <p> Logged as: </p> 
+<% end %>
+<%= image_tag @user.avatar_url(:avatar) if @user.avatar? %><br>
+<%= @user.first_name %>,<br>
+<%= @user.last_name %>,<br>
+<%= @user.email %><br>
+<%= link_to "Log out", logout_path, method: :delete%>

@@ -9,3 +9,9 @@
 #   first_name: MyString
 #   last_name: MyString
 #   email: MyString
+
+one:
+  first_name: User
+  last_name: Example
+  email: micha@example.com
+  password_digest: <%= User.digest('password') %>
