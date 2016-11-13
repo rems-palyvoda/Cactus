@@ -6,3 +6,4 @@
 <%= @user.last_name %>,<br>
 <%= @user.email %><br>
 <%= link_to "Log out", logout_path, method: :delete%>
+<%= link_to "Edit my account", edit_user_path(current_user) %>
