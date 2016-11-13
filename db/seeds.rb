@@ -9,4 +9,15 @@
 user = User.create(first_name: "Ivan", last_name: "Zabuv",
                   email: "izabuv@example.com",
                   password: "foobar", password_confirmation: "foobar",
-                  avatar: open("app/assets/images/default_avatar.png"))
+                  avatar: open("app/assets/images/default_avatar.png"),
+                  admin: true)
+
+20.times do |n|
+  first_name = "Name #{n}"
+  last_name = "Surname #{n}"
+  email = "#{last_name}@example.com"
+  password = "foobar"
+  User.create(first_name: first_name, last_name: last_name, email: email,
+              password: password, password_confirmation: password,
+              avatar: open("app/assets/images/default_avatar.png")
+end
