@@ -1,9 +1,13 @@
 <% if logged_in?%>
   <p> Logged as: </p> 
 <% end %>
+
 <%= image_tag @user.avatar_url(:avatar) if @user.avatar? %><br>
 <%= @user.first_name %>,<br>
 <%= @user.last_name %>,<br>
-<%= @user.email %><br>
-<%= link_to "Log out", logout_path, method: :delete%>
-<%= link_to "Edit my account", edit_user_path(current_user) %>
+
+<% if logged_in? %>
+  <%= @user.email %><br>
+  <%= link_to "Log out", logout_path, method: :delete%>
+  <%= link_to "Edit my account", edit_user_path(current_user) %>
+<% end %>
