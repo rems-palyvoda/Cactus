@@ -17,6 +17,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'capybara', '~> 2.10', '>= 2.10.1'
   gem 'rails-controller-testing'
+  gem 'database_cleaner'
 end
 
 group :development do

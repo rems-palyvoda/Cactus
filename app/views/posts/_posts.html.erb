@@ -1,0 +1,8 @@
+
+<li id="post-<%= post.id %>">
+  <%= link_to post.user.avatar.url, users_path(post.user) =>
+  <span class="content"><%= post.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(post.created_at) %> ago.
+  </span>
+</li>
