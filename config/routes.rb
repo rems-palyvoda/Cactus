@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "sessions#new"
+  
+  root "static_pages#index"
   resources :users
 
   get    '/login',   to: 'sessions#new'

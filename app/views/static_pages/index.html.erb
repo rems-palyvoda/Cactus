@@ -1,0 +1,27 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <p> class="user_info" Тут буде аватар та ім'я користувача</p>
+      </section>
+      <section class="friends">
+        <p>class="friends" Тут будуть іконки аватарок друзів</p>
+      </section>
+      <section class="galery">
+        <p>class="galery" Тут будуть мініатюри картин в галереї</p>
+      </section>
+      <section class="post_form">
+        <p>class="micropost_form" Форма для створення посту</p>        
+      </section>
+    </aside>
+    <div class="col-md-8" id="feed">
+      <h3>Post Feed</h3>
+      <%= render "shared/feed" %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1>Welcome to the Cactus Social Network</h1>
+    <%= render "shared/login_form" %>
+  </div>
+<% end %>
