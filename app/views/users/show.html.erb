@@ -1,20 +1,8 @@
 <% provide(:title, full_name(current_user)) %>
 <div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1><%= full_name(@user) %></h1>
-      <%= image_tag @user.avatar.url(:avatar) unless @user.avatar.blank? %>
-      <%= link_to "follow/unfollow", "#", class: "btn btn-default" %>
-    </section>
-
-    <section class="friends">
-      <p>class="friends" Тут будуть іконки аватарок друзів</p>
-    </section>
-
-    <section class="galery">
-      <p>class="galery" Тут будуть мініатюри картин в галереї</p>
-    </section>
-  </aside>
+    <aside class="col-md-4">
+      <%= render "layouts/aside" %>
+    </aside>
   <div class="col-md-8">
 
     <% if @user.posts.any? %>

@@ -18,7 +18,7 @@ User.create(first_name: "Ivan", last_name: "Zabuv",
             admin: true)
 
 # Create users
-20.times do |n|
+99.times do |n|
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
   email = "#{last_name}@example.com"
@@ -30,7 +30,7 @@ end
 
 # Microposts
 users = User.order(:created_at).take(6)
-10.times do
+50.times do
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.posts.create!(content: content) }
 end
@@ -38,7 +38,7 @@ end
 # Following relationships
 users = User.all
 user = users.first
-following = users[2..10]
-followers = users[3..9]
+following = users[2..50]
+followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }

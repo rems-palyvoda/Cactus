@@ -1,0 +1,4 @@
+<li>
+  <%= image_tag user.avatar.url(:avatar) if user.avatar? %>
+  <%= link_to full_name(user), user_path(user) %>
+</li>

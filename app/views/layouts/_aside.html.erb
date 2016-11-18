@@ -1,14 +1,26 @@
+<% @user ||= current_user %>
+
 <section class="user_info">
-  <%= link_to current_user do %>
-    <h1><%= full_name current_user %></h1>
+  <%= link_to @user do %>
+    <h1><%= full_name @user %></h1>
   <% end %>
-  <%= image_tag current_user.avatar.url(:avatar) unless current_user.avatar.blank? %>
+  <%= image_tag @user.avatar.url(:avatar) unless @user.avatar.blank? %>
   <br>
-  <%= link_to "Edit profile", edit_user_path(current_user), class: "btn btn-default" %>
+  <% if current_user?(@user) %>
+    <%= link_to "Edit profile", edit_user_path(current_user), class: "btn btn-default" %>
+  <% else %>
+    <%= render "users/follow_form" %>
+  <% end %>
 </section>
 
 <section class="friends">
-  <p>class="friends" Тут будуть іконки аватарок друзів</p>
+  <a href="<%= following_user_path(@user) %>">
+    <%= @user.following.count %> following
+  </a>
+  <br>
+  <a href="<%= followers_user_path(@user) %>">
+    <%= @user.followers.count %> followers
+  </a>
 </section>
 
 <section class="galery">
