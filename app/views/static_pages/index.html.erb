@@ -2,7 +2,12 @@
   <div class="row">
     <aside class="col-md-4">
       <section class="user_info">
-        <p> class="user_info" Тут буде аватар та ім'я користувача</p>
+        <%= link_to current_user do %>
+          <h1><%= full_name current_user %></h1>
+        <% end %>
+        <%= image_tag current_user.avatar.url(:avatar) %>
+        <br>
+        <%= link_to "Edit profile", "#", class: "btn btn-default" %>
       </section>
       <section class="friends">
         <p>class="friends" Тут будуть іконки аватарок друзів</p>
@@ -11,7 +16,7 @@
         <p>class="galery" Тут будуть мініатюри картин в галереї</p>
       </section>
       <section class="post_form">
-        <p>class="micropost_form" Форма для створення посту</p>        
+        <p>class="post_form" Форма для створення посту</p>        
       </section>
     </aside>
     <div class="col-md-8" id="feed">

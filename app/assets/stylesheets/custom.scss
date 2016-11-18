@@ -1,6 +1,7 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$light-green-background: #C9FDDA;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -57,5 +58,36 @@ p {
   &:hover {
     color: #fff;
     text-decoration: none;
+  }
+}
+
+/* Aside */
+
+aside {
+  background: $light-green-background;
+  border-radius: 5px;
+  
+  section {
+    margin: 10px;
+  }
+
+  section.user_info {
+      text-align: left;
+    
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+    }
+
+    a {
+      background: none;
+    }
+    
+    .btn {
+      width: 100%;
+      border: none;
+    }
   }
 }

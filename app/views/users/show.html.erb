@@ -1,13 +1,47 @@
-<% if logged_in?%>
-  <p> Logged as: </p> 
-<% end %>
+<% provide(:title, full_name(current_user)) %>
+<div class="row">
+  <aside class="col-md-4">
+    <%= image_tag @user.avatar_url(:avatar) if @user.avatar? %><br>
+    <%= @user.first_name %>,<br>
+    <%= @user.last_name %>,<br>
 
-<%= image_tag @user.avatar_url(:avatar) if @user.avatar? %><br>
-<%= @user.first_name %>,<br>
-<%= @user.last_name %>,<br>
+    <% if logged_in? %>
+      <%= @user.email %><br>
+      <%= link_to "Log out", logout_path, method: :delete%>
+      <%= link_to "Edit my account", edit_user_path(current_user) %>
+    <% end %>
+  </aside>
+  <div class="col-md-8">
+    <% if @user.posts.any? %>
+      <h3> Posts (<%= @user.posts.count %>) </h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+    <% end %>
+  </div>
+</div>
 
-<% if logged_in? %>
-  <%= @user.email %><br>
-  <%= link_to "Log out", logout_path, method: :delete%>
-  <%= link_to "Edit my account", edit_user_path(current_user) %>
-<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
