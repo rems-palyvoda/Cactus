@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   
   root "static_pages#index"
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

@@ -2,7 +2,7 @@
   <%= link_to current_user do %>
     <h1><%= full_name current_user %></h1>
   <% end %>
-  <%= image_tag current_user.avatar.url(:avatar) %>
+  <%= image_tag current_user.avatar.url(:avatar) unless current_user.avatar.blank? %>
   <br>
   <%= link_to "Edit profile", edit_user_path(current_user), class: "btn btn-default" %>
 </section>

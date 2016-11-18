@@ -16,7 +16,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_template "index"
   end
 
-  test "loged user see feed" do
+  test "logged user see feed" do
     log_in_as(@user)
     get root_path
     assert_select "body div#feed"
