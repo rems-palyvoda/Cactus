@@ -4,7 +4,7 @@
   <% end %>
   <%= image_tag current_user.avatar.url(:avatar) %>
   <br>
-  <%= link_to "Edit profile", "#", class: "btn btn-default" %>
+  <%= link_to "Edit profile", edit_user_path(current_user), class: "btn btn-default" %>
 </section>
 
 <section class="friends">
