@@ -14,17 +14,17 @@
 </section>
 
 <section class="friends">
-  <a href="<%= following_user_path(@user) %>">
-    <%= @user.following.count %> following
-  </a>
+  <% @user.followers.order("RANDOM()").limit(8).each do |follower| %>
+    <%= link_to follower do %>
+      <%= image_tag follower.avatar.url, size: "50", alt: full_name(follower) %>
+    <% end %>
+  <% end %>
   <br>
   <a href="<%= followers_user_path(@user) %>">
-    <%= @user.followers.count %> followers
+    ... and other <%= @user.followers.count %> followers
   </a>
 </section>
 
 <section class="galery">
   <p>class="galery" Тут будуть мініатюри картин в галереї</p>
 </section>
-
-

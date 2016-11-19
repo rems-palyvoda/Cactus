@@ -79,6 +79,10 @@ aside {
     margin-right: auto;
     border-radius: 5px;
   }
+
+  .friends img {
+    display: inline;
+  }
     
   .btn {
     width: 100%;
@@ -100,6 +104,7 @@ aside {
   }
   img {
     float: left;
+    border-radius: 100%;
   }
   .timestamp {
     font-size: 0.9em;
@@ -107,4 +112,30 @@ aside {
   }
 }
 
-/* post form */
+/* show  users list */
+
+.users {
+  list-style: none;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid $light-green;
+  }
+  img {
+    height: 50px;
+    float: left;
+    border-radius: 100%;
+  }
+  .name {
+    display: block;
+    margin-left: 60px;
+    margin: 10px;
+  }
+}
+
+/* Post form */
+.post-form {
+  border: 5px solid $light-green;
+  .btn {
+    width:100%;
+  }
+}
