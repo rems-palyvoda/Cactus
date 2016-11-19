@@ -23,3 +23,28 @@ four:
   last_name:        Ohrimko
   email:            ohrimko@example.com
   password_digest:  <%= User.digest('password') %>
+
+michael:
+  first_name: Michael
+  last_name: Example
+  email: michael@example.com
+  password_digest: <%= User.digest('password') %>
+  admin: true
+
+archer:
+  first_name: Sterling
+  last_name: Archer
+  email: duchess@example.gov
+  password_digest: <%= User.digest('password') %>
+
+lana:
+  first_name: Lana
+  last_name: Kane
+  email: hands@example.gov
+  password_digest: <%= User.digest('password') %>
+
+malory:
+  first_name: Malory
+  last_name: Archer
+  email: boss@example.gov
+  password_digest: <%= User.digest('password') %>
