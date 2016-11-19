@@ -81,3 +81,24 @@ aside {
     border: none;
   }
 }
+
+/* Feed */
+.posts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid $light-green;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+  }
+  img {
+    float: left;
+  }
+  .timestamp {
+    font-size: 0.9em;
+    color: #756E6E;
+  }
+}
