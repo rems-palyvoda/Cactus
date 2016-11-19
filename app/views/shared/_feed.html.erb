@@ -1,1 +1,5 @@
-<p> Тут будуть новини </p>
+<% if @feed_items.any? %>
+  <ol class="microposts">
+    <%= render @feed_items %>
+  </ol>
+<% end %>
