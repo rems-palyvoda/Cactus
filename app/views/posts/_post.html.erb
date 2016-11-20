@@ -10,8 +10,10 @@
   </span>
   <span class="content"><%= post.content %></span>
   <span class="post-image"><%= image_tag post.image if post.image %></span>
-  <span class="youtube-player">
-    <iframe width="560" height="349" src="http://www.youtube.com/embed/C_9kSJ-ii9s"
-     frameborder="0"></iframe>
-  </span> 
+  <% unless post.media.blank? %>
+    <span class="youtube-player">
+      <iframe width="560" height="349" src="http://www.youtube.com/embed/<%= post.media %>"
+       frameborder="0"></iframe>
+    </span>
+  <% end %>
 </li>
