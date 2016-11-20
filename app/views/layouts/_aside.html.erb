@@ -20,11 +20,17 @@
     <% end %>
   <% end %>
   <br>
-  <a href="<%= followers_user_path(@user) %>">
-    ... and other <%= @user.followers.count %> followers
+  <a href="<%= followers_user_path(@user) %>" class="btn btn-default">
+    All <%= @user.followers.count %> followers
   </a>
 </section>
 
-<section class="galery">
-  <p>class="galery" Тут будуть мініатюри картин в галереї</p>
+<section class="gallery">
+  <% @user.gallery.order("RANDOM()").limit(8).each do |post| %>
+    <%= image_tag post.image.url, height: "50" %>
+  <% end %>
+  <br>
+  <a href="<%= gallery_user_path(@user) %>" class="btn btn-default">
+    Gallery
+  </a>
 </section>

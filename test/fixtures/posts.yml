@@ -1,5 +1,6 @@
 orange:
   content: "I just ate an orange!"
+  image: "open('app/assets/images/default_avatar.png')"
   created_at: <%= 10.minutes.ago %>
 
 cat_video:

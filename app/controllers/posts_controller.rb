@@ -9,7 +9,8 @@ class PostsController < ApplicationController
       redirect_to root_url
     else
       @post_items = []
-      redirect_to user_path(current_user)
+      flash[:warning] = "Post invalid"
+      redirect_to root_url
     end
   end
 

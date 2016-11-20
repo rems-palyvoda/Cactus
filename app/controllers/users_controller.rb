@@ -52,6 +52,12 @@ class UsersController < ApplicationController
     render "show_follow"
   end
 
+  def gallery
+    @title = "Gallery"
+    @user = User.find(params[:id])
+    @gallery = @user.gallery
+  end
+
   private
 
     def user_params

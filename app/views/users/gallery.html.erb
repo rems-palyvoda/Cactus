@@ -1,0 +1,19 @@
+<% provide(:title, @title) %>
+<div class="row">
+  <aside class="col-md-4">
+    <%= render "layouts/aside" %>
+  </aside>
+  <div class="col-md-8">
+    <div class="user-gallery">
+      <h3><%= @title %></h3>
+      <% if @gallery.any? %>
+        <% @gallery.each do |post| %>
+          <div class="users-image">
+            <%= post.image_desc %>
+            <%= image_tag post.image.url %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

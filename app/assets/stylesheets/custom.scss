@@ -82,6 +82,12 @@ aside {
 
   .friends img {
     display: inline;
+    padding: 4px;
+  }
+  
+  .gallery img {
+    display: inline;
+    padding: 4px;
   }
     
   .btn {
@@ -98,13 +104,22 @@ aside {
     padding: 10px 0;
     border-top: 1px solid $light-green;
   }
+ .avatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+    height: 50px;
+    border-radius: 100%;
+  }
   .content {
     display: block;
     margin-left: 60px;
   }
-  img {
-    float: left;
-    border-radius: 100%;
+  span.post-image {
+    margin-top: 10px;
+    img {
+      max-height: 300px;
+    }
   }
   .timestamp {
     font-size: 0.9em;
@@ -120,11 +135,6 @@ aside {
     padding: 10px 0;
     border-top: 1px solid $light-green;
   }
-  img {
-    height: 50px;
-    float: left;
-    border-radius: 100%;
-  }
   .name {
     display: block;
     margin-left: 60px;
@@ -137,5 +147,17 @@ aside {
   border: 5px solid $light-green;
   .btn {
     width:100%;
+  }
+}
+
+/*  Gallery */
+.users-image {
+  margin: 10px;
+  border: 1px solid green;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 300px;
   }
 }

@@ -4,13 +4,17 @@
     <%= f.text_area :content, placeholder: "Write your message here",
                               class: 'form-control' %>
   </div>
+  <div class="image-desc">
+    <%= f.text_field :image_desc, placeholder: "Image description",
+                                 class: 'form-control' %>
+  </div>
   <div class="media">
     <%= f.text_field :media, placeholder: "Insert youtube link here",
                              class: 'form-control' %>
   </div>
   <span class="picture">
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png',
-                               class: 'form-control' %>
+    <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png',
+                             class: 'form-control' %>
   </span>
   <%= f.submit "Create post", class: "btn btn-primary" %>
 <% end %>

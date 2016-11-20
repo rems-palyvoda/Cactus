@@ -3,4 +3,5 @@ class Post < ApplicationRecord
   default_scope -> { order(created_at: :desc) }
   validates :content, presence: true, length: {maximum: 200}
   validates :user_id, presence: true
+  mount_uploader :image, AvatarUploader
 end
