@@ -1,6 +1,6 @@
 # README
 
-{<img src="https://travis-ci.org/rems-palyvoda/Cactus.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/rems-palyvoda/Cactus]
+<img src="https://travis-ci.org/rems-palyvoda/Cactus.svg?branch=master" alt="Build Status" />
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

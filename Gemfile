@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem "mini_magick"
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+gem 'rack', '~> 2.0.1'
 
 group :development, :test do
   gem 'byebug', platform: :mri
