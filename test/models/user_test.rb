@@ -90,7 +90,8 @@ class UserTest < ActiveSupport::TestCase
 
   test "associated microposts should be destroyed" do
     @user.save
-    @user.posts.create!(content: "Lorem ipsum")
+    @user.posts.create!(content: "Lorem ipsum",
+                        media: "https://www.youtube.com/watch?v=5r6yzFEXajQ")
     assert_difference "Post.count", -1 do
       @user.destroy
     end

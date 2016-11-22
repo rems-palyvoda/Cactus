@@ -4,17 +4,20 @@ one:
   first_name:       User
   last_name:        Example
   email:            micha@example.com
+  avatar:           open("app/assets/images/default_avatar.png")
   password_digest:  <%= User.digest('password') %>
 
 two:
   first_name:       Prokip  
   last_name:        Pobig
   email:            pobig@example.com
+  avatar:           open("app/assets/images/default_avatar.png")
   password_digest:  <%= User.digest('password') %>
 
 three:
   first_name:       Stepan
   last_name:        Stepanko
+  avatar:           open("app/assets/images/default_avatar.png")
   email:            stepanko@example.com
   password_digest:  <%= User.digest('password') %>
 
@@ -22,29 +25,34 @@ four:
   first_name:       Ohrim
   last_name:        Ohrimko
   email:            ohrimko@example.com
+  avatar:           open("app/assets/images/default_avatar.png")
   password_digest:  <%= User.digest('password') %>
 
 michael:
-  first_name: Michael
-  last_name: Example
-  email: michael@example.com
-  password_digest: <%= User.digest('password') %>
-  admin: true
+  first_name:       Michael
+  last_name:        Example
+  email:            michael@example.com
+  avatar:           open("app/assets/images/default_avatar.png")
+  password_digest:  <%= User.digest('password') %>
+  admin:            true
 
 archer:
-  first_name: Sterling
-  last_name: Archer
-  email: duchess@example.gov
-  password_digest: <%= User.digest('password') %>
+  first_name:       Sterling
+  last_name:        Archer
+  email:            duchess@example.gov
+  avatar:           open("app/assets/images/default_avatar.png")
+  password_digest:  <%= User.digest('password') %>
 
 lana:
-  first_name: Lana
-  last_name: Kane
-  email: hands@example.gov
-  password_digest: <%= User.digest('password') %>
+  first_name:       Lana
+  last_name:        Kane
+  email:            hands@example.gov
+  avatar:           open("app/assets/images/default_avatar.png")
+  password_digest:  <%= User.digest('password') %>
 
 malory:
-  first_name: Malory
-  last_name: Archer
-  email: boss@example.gov
-  password_digest: <%= User.digest('password') %>
+  first_name:       Malory
+  last_name:        Archer
+  email:            boss@example.gov
+  avatar:           open("app/assets/images/default_avatar.png")
+  password_digest:  <%= User.digest('password') %>

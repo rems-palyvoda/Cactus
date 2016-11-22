@@ -11,11 +11,13 @@ DatabaseCleaner.strategy = :truncation
 DatabaseCleaner.clean
 
 # Create user admin
-User.create(first_name: "Ivan", last_name: "Zabuv",
-            email: "izabuv@example.com",
-            password: "foobar", password_confirmation: "foobar",
-            avatar: open("app/assets/images/default_avatar.png"),
-            admin: true)
+User.create(first_name: "Ivan",
+            last_name:  "Zabuv",
+            email:      "izabuv@example.com",
+            password:   "foobar", password_confirmation: "foobar",
+            media:      "https://www.youtube.com/watch?v=MhkGQAoc7bc",
+            avatar:     open("app/assets/images/default_avatar.png"),
+            admin:      true)
 
 # Create users
 99.times do |n|
