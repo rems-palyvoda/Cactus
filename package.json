@@ -1,0 +1,22 @@
+{
+  "name": "cactus_social_network",
+  "version": "1.0.0",
+  "description": "softgroup academy project",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rems-palyvoda/Cactus.git"
+  },
+  "author": "Roman Mazurets",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rems-palyvoda/Cactus/issues"
+  },
+  "homepage": "https://github.com/rems-palyvoda/Cactus#readme"
+}
