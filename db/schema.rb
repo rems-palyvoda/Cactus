@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20161120152706) do
     t.string   "avatar"
     t.string   "remember_digest"
     t.boolean  "admin",           default: false
+    t.         "images"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

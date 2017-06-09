@@ -20,7 +20,7 @@ group :development, :test do
   gem 'capybara', '~> 2.10', '>= 2.10.1'
   gem 'rails-controller-testing'
   gem 'database_cleaner'
-  gem 'faker',          '1.6.6'
+  gem 'ffaker'
 end
 
 group :development do

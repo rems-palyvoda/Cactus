@@ -1,6 +1,8 @@
 
 <li id="post-<%= post.id %>">
-  <span class="avatar"><%= link_to image_tag(post.user.avatar.url, size: "50"), user_path(post.user) %></span>
+  <% if post.user.avatar.present? %>
+    <span class="avatar"><%= link_to image_tag(post.user.avatar.url, size: "50"), user_path(post.user) %></span>
+  <% end %>
   <strong class="username"><%= full_name(post.user) %></strong>
   <span class="timestamp">
     Posted <%= time_ago_in_words(post.created_at) %> ago.
